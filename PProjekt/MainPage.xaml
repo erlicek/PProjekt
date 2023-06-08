@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PProjekt.MainPage"
+             BackgroundImageSource="backgroung.png">
+
+<ScrollView>
+        <AbsoluteLayout
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+            <StackLayout>
+            <HorizontalStackLayout
+                Margin="-3,0,0,0"
+                WidthRequest="330">
+
+                <Button
+                    Text="LogIn"
+                    TextColor="#00042E"
+                    BackgroundColor="#00cbfe"
+                    x:Name="LoginPage"
+                    WidthRequest="166"
+                    HeightRequest="50"
+                    IsEnabled="False"
+                    Clicked="LoginTop"
+                    FontAttributes="Bold"
+                    />
+
+                <Button
+                    Text="Register"
+                    TextColor="#00042E"
+                    BackgroundColor="#b0efff"
+                    x:Name="RegisterPage"
+                    WidthRequest="166"
+                    HeightRequest="50"
+
+                    IsEnabled="True"
+                    Clicked="RegisterTop"
+                    FontAttributes="None"
+                    />
+
+            </HorizontalStackLayout>
+
+            <VerticalStackLayout
+                Padding="10"
+                Spacing="12"
+                BackgroundColor="#00CBFE"
+                WidthRequest="330"
+                HeightRequest="260"
+                Margin="0,-10,0,0">
+
+                <VerticalStackLayout
+                    Spacing="3">
+                    <Label
+                    Text="Username"
+                    FontSize="24"
+                    HorizontalOptions="Center"/>
+
+                    <Entry
+                    Placeholder=" Username"
+                    PlaceholderColor="#8597ab"
+                    TextColor="White"
+                    x:Name="username"
+                    WidthRequest="250"
+                    BackgroundColor="#002044"
+                    
+                />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout
+                    Spacing="3">
+                    <Label
+                    Text="Password"
+                    FontSize="24"
+                    HorizontalOptions="Center" />
+
+                    <Entry
+                    Placeholder=" Password (min 8 character)"
+                    PlaceholderColor="#8597ab"
+                    TextColor="White"
+                    x:Name="password"
+                    WidthRequest="250"
+                    BackgroundColor="#002044"
+                    IsPassword="True"
+                />
+                </VerticalStackLayout>
+
+
+                <Button
+                    Text="LogIn"
+                    x:Name="BottomBtn"
+                    TextColor="White"
+                    BackgroundColor="#004A75"
+                    BorderColor="#00042E"
+                    BorderWidth="2"
+                    WidthRequest="250"
+                    Margin="0,15,0,0"
+                    Clicked="Submit"
+                    />
+            </VerticalStackLayout>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ScrollView>
+
+</ContentPage>
